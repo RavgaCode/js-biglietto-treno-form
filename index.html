@@ -8,6 +8,38 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!-- User Form -->
+    <div class="user-form">
+      <!-- User Name -->
+      <div class="form-item">
+        <label for="user-name">Nome e cognome</label>
+        <input type="text" id="user-name" />
+      </div>
+      <!-- User Km -->
+      <div class="form-item">
+        <label for="user-km">Distanza in Km</label>
+        <input type="number" id="user-km" />
+      </div>
+      <!-- User age -->
+      <div class="form-item">
+        <label for="user-age">Fascia d'età</label>
+        <select name="user-age" id="user-age">
+          <option value="adult">Maggiorenne</option>
+          <option value="young">Minorenne</option>
+          <option value="senior">Over 65</option>
+        </select>
+      </div>
+      <!-- Generate Button -->
+      <div class="form-item">
+        <button id="generate-ticket">Genera</button>
+      </div>
+    </div>
+    <!-- Ticket recap -->
+    <div id="ticket">
+      <div id="ticket-name"></div>
+      <div id="ticket-price"></div>
+      <div id="ticket-number"></div>
+    </div>
     <script src="js/script.js"></script>
   </body>
 </html>
