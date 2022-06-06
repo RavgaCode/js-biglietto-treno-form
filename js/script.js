@@ -15,17 +15,23 @@ function ticketGenerate() {
   let discount = 0;
   if (userAge === "young") {
     discount = price * discountYoung;
+    document.getElementById("ticket-offer").innerText = "Young";
   } else if (userAge === "senior") {
     discount = price * discountSenior;
+    document.getElementById("ticket-offer").innerText = "Senior";
+  } else {
+    document.getElementById("ticket-offer").innerText = "Standard";
   }
   const finalPrice = price - discount;
-  console.log(finalPrice);
-  console.log(userName);
 
   const ticketNumber = Math.floor(Math.random() * 99999);
+  const ticketWagon = Math.floor(Math.random() * 11 + 1);
 
   document.getElementById("ticket-name").innerText = userName;
-  document.getElementById("ticket-price").innerText = finalPrice.toFixed(2);
+  document.getElementById("ticket-price").innerText = `${finalPrice.toFixed(
+    2
+  )} €`;
   document.getElementById("ticket-number").innerText = ticketNumber;
+  document.getElementById("ticket-wagon").innerText = ticketWagon;
   document.getElementById("ticket-section").classList.add("active");
 }
