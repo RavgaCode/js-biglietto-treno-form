@@ -8,38 +8,73 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <!-- User Form -->
-    <div class="user-form">
-      <!-- User Name -->
-      <div class="form-item">
-        <label for="user-name">Nome e cognome</label>
-        <input type="text" id="user-name" />
-      </div>
-      <!-- User Km -->
-      <div class="form-item">
-        <label for="user-km">Distanza in Km</label>
-        <input type="number" id="user-km" />
-      </div>
-      <!-- User age -->
-      <div class="form-item">
-        <label for="user-age">Fascia d'età</label>
-        <select name="user-age" id="user-age">
-          <option value="adult">Maggiorenne</option>
-          <option value="young">Minorenne</option>
-          <option value="senior">Over 65</option>
-        </select>
-      </div>
-      <!-- Generate Button -->
-      <div class="form-item">
-        <button id="generate-ticket">Genera</button>
-      </div>
+    <div class="container">
+      <!-- FORM SECTION -->
+      <h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+      <section class="form-section">
+        <!-- User Form -->
+        <div class="user-form">
+          <!-- User Name -->
+          <div class="form-item">
+            <label for="user-name">Nome e cognome</label>
+            <input type="text" id="user-name" />
+          </div>
+          <!-- User Km -->
+          <div class="form-item">
+            <label for="user-km">Distanza in Km</label>
+            <input type="number" id="user-km" />
+          </div>
+          <!-- User age -->
+          <div class="form-item">
+            <label for="user-age">Fascia d'età</label>
+            <select name="user-age" id="user-age">
+              <option value="adult">Maggiorenne</option>
+              <option value="young">Minorenne</option>
+              <option value="senior">Over 65</option>
+            </select>
+          </div>
+        </div>
+        <!-- Generate Button -->
+        <div class="button-row">
+          <button id="generate-ticket">Genera</button>
+          <button>Annulla</button>
+        </div>
+      </section>
+      <!-- TICKET SECTION -->
+      <section id="ticket-section">
+        <h2>IL TUO BIGLIETTO</h2>
+        <!-- Ticket recap -->
+        <div class="ticket">
+          <h3>DETTAGLI PASSEGGERI</h3>
+          <div class="ticket-columns">
+            <!-- ticket col 1 -->
+            <div class="ticket-col">
+              <h3>NOME PASSENGERO</h3>
+              <div id="ticket-name"></div>
+            </div>
+            <!-- ticket col 2 -->
+            <div class="ticket-col">
+              <h4>Offerta</h4>
+            </div>
+            <!-- ticket col 3 -->
+            <div class="ticket-col">
+              <h4>Carrozza</h4>
+            </div>
+            <!-- ticket col 4 -->
+            <div class="ticket-col">
+              <h4>Codice CP</h4>
+              <div id="ticket-number"></div>
+            </div>
+            <!-- ticket col 5 -->
+            <div class="ticket-col">
+              <h4>Costo biglietto</h4>
+              <div id="ticket-price"></div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
-    <!-- Ticket recap -->
-    <div id="ticket">
-      <div id="ticket-name"></div>
-      <div id="ticket-price"></div>
-      <div id="ticket-number"></div>
-    </div>
+
     <script src="js/script.js"></script>
   </body>
 </html>

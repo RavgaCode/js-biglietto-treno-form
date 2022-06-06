@@ -12,8 +12,7 @@ function ticketGenerate() {
   const price = userKm * 0.21;
   const discountYoung = 20 / 100;
   const discountSenior = 40 / 100;
-  let discount;
-
+  let discount = 0;
   if (userAge === "young") {
     discount = price * discountYoung;
   } else if (userAge === "senior") {
@@ -28,5 +27,5 @@ function ticketGenerate() {
   document.getElementById("ticket-name").innerText = userName;
   document.getElementById("ticket-price").innerText = finalPrice.toFixed(2);
   document.getElementById("ticket-number").innerText = ticketNumber;
-  document.getElementById("ticket").classList.add("active");
+  document.getElementById("ticket-section").classList.add("active");
 }
